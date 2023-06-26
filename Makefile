@@ -6,7 +6,7 @@
 #    By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/02 22:28:17 by marmoral          #+#    #+#              #
-#    Updated: 2023/06/03 12:50:50 by marmoral         ###   ########.fr        #
+#    Updated: 2023/06/26 14:33:28 by marmoral         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra -I ./includes/push_swap.h
 
 LPATH	= ./libft/
-SRCS	= $(addprefix src/, push_swap.c error_handler.c)
+SRCS	= $(addprefix src/, push_swap.c) $(addprefix utils/, error_handler.c ft_atol.c ft_free_array.c parser.c)
 OBJS	= $(SRCS:.c=.o)
 
 all: $(NAME)

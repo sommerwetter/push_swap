@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:32:37 by marmoral          #+#    #+#             */
-/*   Updated: 2023/06/03 13:09:04 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/07/02 03:48:22 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		ft_toupper(int c);
 
 int		ft_tolower(int c);
 
-long		ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 

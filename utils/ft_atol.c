@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 11:13:05 by marmoral          #+#    #+#             */
-/*   Updated: 2022/07/02 03:43:59 by marmoral         ###   ########.fr       */
+/*   Updated: 2023/06/26 12:34:19 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/push_swap.h"
 
 static	int	check_sign(const char *str)
 {
@@ -40,7 +40,7 @@ static	int	find_start(const char *str)
 	return (n);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
 	int		x;
 	int		nbr;
@@ -57,5 +57,7 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + nbr;
 		x++;
 	}
+	if(str[x] && !ft_isdigit(str[x]))
+		return (0);
 	return (check_sign(str) * result);
 }
