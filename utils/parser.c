@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:04:14 by marmoral          #+#    #+#             */
-/*   Updated: 2023/07/24 17:11:25 by marmoral         ###   ########.fr       */
+/*   Updated: 2023/07/24 18:11:47 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ static int	*parse(int count, char **tmp, size_t z)
 		ft_memerror();
 	while (tmp[i])
 		array_nbrs[x++] = ft_atoi(tmp[i++]);
-	ft_free(tmp);
+	if (z == 0)
+		ft_free(tmp);
 	return (array_nbrs);
 }
 
