@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_stuff.c                                    :+:      :+:    :+:   */
+/*   index_node.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/22 15:04:07 by marmoral          #+#    #+#             */
-/*   Updated: 2023/08/05 23:42:23 by marmoral         ###   ########.fr       */
+/*   Created: 2023/07/24 19:42:11 by marmoral          #+#    #+#             */
+/*   Updated: 2023/08/05 23:42:17 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_free(char **str)
+int	i_1st_node(t_list *lst, int range_start, int range_end)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i])
-		free (str[i++]);
-	free(str);
+	while (lst && (lst->value < range_start || lst->value > range_end))
+	{
+		lst = lst->next;
+		i++;
+	}
+	if (!lst)
+		return (-1);
+	return (i);
 }
 
-void	ft_free_stack(t_list **stack)
+int	i_last_node(t_list *lst, int range_start, int range_end)
 {
-	t_list	*tmp;
-	t_list	*start;
+	size_t	i;
+	size_t	last;
 
-	start = *stack;
-	while (start)
+	i = 0;
+	while (lst)
 	{
-		tmp = start;
-		start = start->next;
-		free(tmp);
+		if (lst->value >= range_start && lst->value <= range_end)
+			last = i;
+		lst = lst->next;
+		i++;
 	}
-	free(stack);
+	return (last);
 }

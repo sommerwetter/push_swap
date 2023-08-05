@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 07:10:41 by marmoral          #+#    #+#             */
-/*   Updated: 2023/07/24 17:08:39 by marmoral         ###   ########.fr       */
+/*   Updated: 2023/08/05 23:42:39 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 static	int	*a_check(int ac, char **av, size_t *size)
 {
 	if (ac == 1)
-	{
-		ft_putendl_fd("Error", 1);
 		exit (0);
-	}
 	return (parser(ac, av, &size));
 }
 
@@ -35,12 +32,13 @@ int	main(int ac, char **av)
 	b = (t_list **)malloc(sizeof(t_list));
 	if (!a || !b)
 		return (0);
-	*a = 0;
-	*b = 0;
-	
-	//need to code: initialize list and start sorting//
-	
+	*a = NULL;
+	*b = NULL;
+	initlst(array_nbrs, size, a);
+	if (size > 1)
+		sort_stack(a, b);
 	free(array_nbrs);
 	ft_free_stack(a);
 	ft_free_stack(b);
+	return (0);
 }

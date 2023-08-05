@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_stuff.c                                    :+:      :+:    :+:   */
+/*   op_sp.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/22 15:04:07 by marmoral          #+#    #+#             */
-/*   Updated: 2023/08/05 23:42:23 by marmoral         ###   ########.fr       */
+/*   Created: 2023/07/25 13:18:13 by marmoral          #+#    #+#             */
+/*   Updated: 2023/08/05 23:41:58 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_free(char **str)
+void	pb(t_list **A, t_list **B)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		free (str[i++]);
-	free(str);
+	push(A, B);
+	ft_putendl_fd("pb", 1);
 }
 
-void	ft_free_stack(t_list **stack)
+void	pa(t_list **A, t_list **B)
 {
-	t_list	*tmp;
-	t_list	*start;
+	push(B, A);
+	ft_putendl_fd("pa", 1);
+}
 
-	start = *stack;
-	while (start)
-	{
-		tmp = start;
-		start = start->next;
-		free(tmp);
-	}
-	free(stack);
+void	sa(t_list **A)
+{
+	swap(A);
+	ft_putendl_fd("sa", 1);
 }
