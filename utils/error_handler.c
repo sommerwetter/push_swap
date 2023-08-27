@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 10:03:54 by marmoral          #+#    #+#             */
-/*   Updated: 2023/07/24 17:11:05 by marmoral         ###   ########.fr       */
+/*   Updated: 2023/08/08 18:05:55 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_memerror(void)
 {
-	ft_putendl_fd("Error allocating memory", 1);
+	ft_putendl_fd("Error allocating memory", 2);
 	exit (0);
 }
 

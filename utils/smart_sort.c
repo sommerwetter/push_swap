@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:29:04 by marmoral          #+#    #+#             */
-/*   Updated: 2023/08/05 23:41:55 by marmoral         ###   ########.fr       */
+/*   Updated: 2023/08/08 21:29:19 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	smart_pb(t_list **A, t_list **B, size_t n)
 
 	i = 0;
 	x = minvalind_lst(*A, n);
-	if (x < n / 2)
+	if (x <= n / 2)
 		while (i++ < x)
 			ra(A);
 	else

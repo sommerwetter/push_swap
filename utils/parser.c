@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 20:04:14 by marmoral          #+#    #+#             */
-/*   Updated: 2023/07/24 18:11:47 by marmoral         ###   ########.fr       */
+/*   Updated: 2023/08/08 18:05:41 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	*parser(int ac, char **av, size_t **size)
 	}
 	if (!check4error(tmp, z))
 	{
-		ft_putendl_fd("Error", 1);
+		ft_putendl_fd("Error", 2);
 		if (ac == 2)
 			ft_free(tmp);
 		exit (0);
